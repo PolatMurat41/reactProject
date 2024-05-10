@@ -1,15 +1,16 @@
 import { useState } from "react";
 
 export default function Form() {
-    const [name,setName]=useState("")
-    
-  function handleChance() {
-    console.log("Chance occured");
-  }
+  const [name, setName] = useState("");
+
   return (
     <div>
       <form>
-        <input onChange={handleChance} type="text" value={name} />
+        <input
+          onChange={(e) => setName(e.target.value)}
+          type="text"
+          value={name}
+        />
       </form>
     </div>
   );
